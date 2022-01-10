@@ -25,6 +25,11 @@ crossWord(e){
     const li = e.target;
     li.classList.toggle ('crossed')
 }
+delOneItem(e){
+    let ToDoArray=this.state.bizneslist;
+    ToDoArray.splice(e.index,1);
+    this.setState({bizneslist:ToDoArray})
+}
 deliteItem(){
     let listArray = this.state.bizneslist;
     listArray=[];
@@ -47,7 +52,7 @@ render(){
                 </div>
                 <ol className="list">
                     {this.state.bizneslist.map((item, index)=>(
-                        <li className="li" onClick = {this.crossWord} key={index}> {item}</li>
+                        <li className="li" onClick = {this.crossWord} onDoubleClick={(e)=>this.delOneItem({index})} key={index}> {item}</li>
                     ))}
                 </ol>
                 <button onClick={()=>this.deliteItem()}>Удалить список</button>
