@@ -18,6 +18,14 @@
 h1{
   color: #f0a85c;
 }
+p{
+  font-family: Helvetica, sans-serif;
+font-size: 14px;
+font-style: italic;
+text-align: start;
+margin-left: 20px;
+margin-right: 15px;
+}
 
 body{
   background-image: url(fon-black.jpg);
